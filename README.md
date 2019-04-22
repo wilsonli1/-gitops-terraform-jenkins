@@ -19,32 +19,7 @@ The configuration in this repository was run using `Terraform v0.11.13`.
 * [AnsiColor Plugin](https://wiki.jenkins.io/display/JENKINS/AnsiColor+Plugin)
 * [GitHub Plugin](https://wiki.jenkins.io/display/JENKINS/GitHub+Plugin)
 * [Pipeline Plugin](https://wiki.jenkins.io/display/JENKINS/Pipeline+Plugin)
-
-## Usage
-
-Initialize the Terraform:
-
-```
-terraform init
-```
-
-View the changes:
-
-```
-terraform plan
-```
-
-Launch the resources:
-
-```
-terraform apply
-```
-
-Show resource details:
-
-```
-terraform show
-```
+* [CloudBees AWS Credentials Plugin](https://wiki.jenkins.io/display/JENKINS/CloudBees+AWS+Credentials+Plugin)
 
 ## Questions?
 
