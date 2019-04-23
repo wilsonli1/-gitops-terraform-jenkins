@@ -2,13 +2,13 @@
 
 ## Overview
 
-Video can be found here:
-
-https://youtu.be/qFjGqPw1NUY
-
 This repository will demonstrate an example GitOps workflow with Terraform and Jenkins.
 
 The configuration in this repository was run using `Terraform v0.11.13`.
+
+Video can be found here:
+
+https://youtu.be/qFjGqPw1NUY
 
 ## Requirements
 
