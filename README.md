@@ -12,6 +12,20 @@ The configuration in this repository was run using `Terraform v0.11.13`.
 * GitHub access token
 * SSH Key configured on Jenkins to clone repositories
 
+## Setup Bucket
+
+You will need to create a bucket and reference the bucket name in the following section of `main.tf`:
+
+```
+terraform {
+  backend "s3" {
+    bucket = "terraform-bucket-alex"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+```
+
 ## Plugins Required
 
 * [Workspace Cleanup Plugin](https://wiki.jenkins.io/display/JENKINS/Workspace+Cleanup+Plugin)
