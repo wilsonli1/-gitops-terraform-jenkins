@@ -9,8 +9,10 @@ The configuration in this repository was run using `Terraform v0.11.13`.
 ## Requirements
 
 * Terraform installed on Jenkins
+* Correct plugins installed on Jenkins
 * GitHub access token
-* SSH Key configured on Jenkins to clone repositories
+* AWS credentials
+* S3 bucket
 
 ## Setup Bucket
 
