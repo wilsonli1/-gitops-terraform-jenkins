@@ -26,6 +26,20 @@ resource "aws_instance" "default" {
   }
 }
 
+# Create EC2 instance 2
+resource "aws_instance" "default" {
+  ami                    = var.ami
+  count                  = var.counter
+  key_name               = var.key_name
+  vpc_security_group_ids = "terraform-default-sg2"
+  source_dest_check      = false
+  instance_type          = var.instance_type
+
+  tags = {
+    Name = "terraform-test2"
+  }
+}
+
 # Create Security Group for EC2
 resource "aws_security_group" "default" {
   name = "terraform-default-sg"
@@ -54,6 +68,18 @@ resource "aws_security_group" "default" {
     ingress {
     from_port   = 18080
     to_port     = 18080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+# Create Security Group for EC2
+resource "aws_security_group"  {
+  name = "terraform-default-sg2"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
