@@ -27,7 +27,7 @@ resource "aws_instance" "default" {
 }
 
 # Create EC2 instance 2
-resource "aws_instance" "default" {
+resource "aws_instance"  {
   ami                    = var.ami
   count                  = var.counter
   key_name               = var.key_name
