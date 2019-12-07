@@ -27,7 +27,7 @@ resource "aws_instance" "default" {
 }
 
 # Create EC2 instance 2
-resource "aws_instance"  {
+resource "aws_instance"  "test2"{
   ami                    = var.ami
   count                  = var.counter
   key_name               = var.key_name
@@ -74,7 +74,7 @@ resource "aws_security_group" "default" {
 }
 
 # Create Security Group for EC2
-resource "aws_security_group"  {
+resource "aws_security_group" "sg-test2" {
   name = "terraform-default-sg2"
 
   ingress {
