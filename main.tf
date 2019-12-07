@@ -31,7 +31,7 @@ resource "aws_instance"  "test2"{
   ami                    = var.ami
   count                  = var.counter
   key_name               = var.key_name
-  vpc_security_group_ids = "terraform-default-sg2"
+  vpc_security_group_ids = [aws_security_group.sg-test2.id]
   source_dest_check      = false
   instance_type          = var.instance_type
 
